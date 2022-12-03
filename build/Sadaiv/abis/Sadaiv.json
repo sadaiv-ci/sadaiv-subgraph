@@ -1,0 +1,150 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "owner",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct Sadaiv.Repository",
+        "name": "repository",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "developer",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "cid",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "branch",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "commitMessage",
+            "type": "string"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct Sadaiv.Build",
+        "name": "build",
+        "type": "tuple"
+      }
+    ],
+    "name": "NewBuildCreated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "walletAddress",
+        "type": "address"
+      }
+    ],
+    "name": "VerifiedBuilder",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "repositoryOwner",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "repositoryName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "branchName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "developer",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "commitMessage",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      }
+    ],
+    "name": "createBuild",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "_hashMessage",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint8",
+        "name": "_v",
+        "type": "uint8"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "_r",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "_s",
+        "type": "bytes32"
+      }
+    ],
+    "name": "verifyBuilder",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

@@ -1,10 +1,11 @@
 {
   "name": "graph",
   "license": "UNLICENSED",
+  "version": "0.0.1",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ sadaiv-ci/graph",
+    "deploy": "graph deploy --product hosted-service tusharojha/sadaiv",
     "create-local": "graph create --node http://localhost:8020/ sadaiv-ci/graph",
     "remove-local": "graph remove --node http://localhost:8020/ sadaiv-ci/graph",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 sadaiv-ci/graph",

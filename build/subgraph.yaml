@@ -1,6 +1,6 @@
 specVersion: 0.0.5
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: Sadaiv
@@ -8,7 +8,7 @@ dataSources:
     source:
       address: "0x4D81b6650134493F5833a499eD44c0B94415EE48"
       abi: Sadaiv
-      startBlock: 29466681 
+      startBlock: 29466681
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -18,10 +18,10 @@ dataSources:
         - VerifiedBuilder
       abis:
         - name: Sadaiv
-          file: ./abis/Sadaiv.json
+          file: Sadaiv/abis/Sadaiv.json
       eventHandlers:
         - event: NewBuildCreated((string,string),(string,string,string,string))
           handler: handleNewBuildCreated
         - event: VerifiedBuilder(string,address)
           handler: handleVerifiedBuilder
-      file: ./src/sadaiv.ts
+      file: Sadaiv/Sadaiv.wasm

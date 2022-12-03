@@ -1,0 +1,21 @@
+type NewBuildCreated @entity(immutable: true) {
+  id: Bytes!
+  repository_owner: String! # string
+  repository_name: String! # string
+  build_developer: String! # string
+  build_cid: String! # string
+  build_branch: String! # string
+  build_commitMessage: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type VerifiedBuilder @entity(immutable: true) {
+  id: Bytes!
+  email: String! # string
+  walletAddress: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
