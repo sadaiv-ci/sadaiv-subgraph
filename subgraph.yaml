@@ -1,0 +1,26 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Sadaiv
+    network: mainnet
+    source:
+      address: "0x4D81b6650134493F5833a499eD44c0B94415EE48"
+      abi: Sadaiv
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - NewBuildCreated
+        - VerifiedBuilder
+      abis:
+        - name: Sadaiv
+          file: ./abis/Sadaiv.json
+      eventHandlers:
+        - event: NewBuildCreated((string,string),(string,string,string,string))
+          handler: handleNewBuildCreated
+        - event: VerifiedBuilder(string,address)
+          handler: handleVerifiedBuilder
+      file: ./src/sadaiv.ts
